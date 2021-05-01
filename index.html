@@ -16,62 +16,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <style>
-        .image-resize{
-            height: 380px;
-            width: 380px;
-            object-position: center center;
-        }    
-        .image-resize-atelier{
-            height: 470px;
-            width: 470px;
-            object-position: center center;
-        }   
-        .btn-default {
-            color: #333;
-            background-color: #fff;
-            border-color: #ccc;
-        }
-        .btn-default:focus {
-            color: #333;
-            background-color: #e6e6e6;
-            border-color: #8c8c8c;
-        }
-        .btn-default:hover {
-            color: #333;
-            background-color: #e6e6e6;
-            border-color: #adadad;
-        }
-        .btn-default:active {
-            color: #333;
-            background-color: #e6e6e6;
-            border-color: #adadad;
-        }
-        .map-container-2{
-            overflow:hidden;
-            padding-bottom:56.25%;
-            position:relative;
-            height:0;
-            }
-            .map-container-2 iframe{
-            left:0;
-            top:0;
-            height:100%;
-            width:100%;
-            position:absolute;
-            }
-    
-    
-        .break-text p {
-        word-wrap: break-word;
-        }
-        .carousel-inner img {       
-        display:block;
-        height: 500px; 
-        max-width: 100%;
-        }
-        #popup-img{
-            border-radius: 5px;
-        }
+        
 
     </style>
     <body id="page-top">
@@ -116,24 +61,24 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-tint fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Peinture</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 style="color: white;" class="my-3">Peinture</h4>
+                        <p style="color: white;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-eye-dropper fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Vernissage</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 style="color: white;" class="my-3">Vernissage</h4>
+                        <p style="color: white;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-swatchbook fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Retouches</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 style="color: white;" class="my-3">Retouches</h4>
+                        <p style="color: white;" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
                     </div>
                 </div>
             </div>
@@ -248,7 +193,6 @@
                 <div class="container">
                     <div class="text-center">
                         <h2 class="section-heading text-uppercase">Portfolio</h2>
-                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-4 col-lg-4">
@@ -270,9 +214,10 @@
                             <img class="img-responsive image-resize popup" id="img6" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/6.png" src="img/portfolio/6.png" style="padding: 10px;" alt="image">
                           </div>
                     </div>
-                        <div class="text-center">
-                            <button onclick="slideToLeft()" class="btn btn-default btn-arrow-left">‹</button>
-                            <button onclick="slideToRight()" class="btn btn-default btn-arrow-left">›</button>
+                        <div class="text-center" style="padding: 20px;">
+                            <button onclick="slideToLeft()" class="btn btn-default glyphicon glyphicon-menu-left"><</button>
+                          
+                            <button onclick="slideToRight()" class="btn btn-default btn-arrow-left">></button>
                           </div>               
                         
                 </div>
@@ -293,12 +238,12 @@
         </section>
         <!-- About-->
         <section class="page-section" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">A PROPOS</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-                
+            <div class="container text-center">
+                <h2 class="section-heading text-uppercase" style="padding: 40px;">A PROPOS</h2>
+                <div class="row align-items-center text-center">                
+                      <p>COLOR MAKER est un studio de peinture pour maquettes packaging. Avec une approche artisanale et sur-mesure, nous donnons leurs couleurs aux grandes marques du luxe, des cosmétiques, des spiritueux et de la grande consommation.
+                      </p>                    
+                </div>            
             </div>
         </section>
        
@@ -306,7 +251,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase" style="padding: 40px;">Nous contacter</h2>
+                    <h2 class="section-heading text-uppercase" style="padding-bottom: 40px;">Nous contacter</h2>
                 </div>
                                           
                     <form id="contactForm" action="https://formspree.io/f/mleagnaz" method="POST">
@@ -344,7 +289,7 @@
                         <h4 style="color: white;">2 Impasse du Clos Neuf</h4>
                         <h4 style="color: white;">44680 SAINTE-PAZANNE</h4>
                     </div>
-                    <div class="text-center" style="padding: 40px;">
+                    <div class="text-center" style="padding: 20px;">
                         <!--Google map-->
                         <div id="map-container-google-2" class="z-depth-1-half map-container-2">
                         <iframe src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=2%20bis%20impasse%20du%20clos%20neuf+(COLOR%20MAKER)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0"
