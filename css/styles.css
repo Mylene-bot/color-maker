@@ -10268,14 +10268,15 @@ header.masthead .masthead-heading {
 .img-brand {
   height: 2.75rem;
 }
-/*
+
 section#atelier {
-  background-image: url("../img/gallery/contact.jpg");
+  /*background-image: url("../img/gallery/contact.jpg");*/
+  background-color: #2e8ff7cc;
 }
 
 section#atelier .section-heading {
   color: #fff;
-}*/
+}
 
 section#services {
   background-image: url("../img/gallery/contact.jpg");
@@ -10290,15 +10291,16 @@ section#portfolio {
 section#portfolio .section-heading {
   color: #fff;
 }
-/*
-section#about {
-  /*background-image: url("../img/gallery/contact.jpg");
 
+section#about {
+  /*background-image: url("../img/gallery/contact.jpg");*/
+  background-color: #2e8ff7cc;
 }
 
 section#about .section-heading {
   color: #fff;
 }
+/*
 section#about p {
   color: #fff;
 }*/
