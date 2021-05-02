@@ -10129,8 +10129,8 @@ header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #fff;
-  background-color:black;
+  color: rgb(153, 120, 120);
+  background-color:#6db4e4cc;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10437,14 +10437,14 @@ header.masthead .masthead-heading {
 .img-brand {
   height: 2.75rem;
 }
-/*
+
 section#atelier {
   background-image: url("../img/gallery/contact.jpg");
 }
 
 section#atelier .section-heading {
   color: #fff;
-}*/
+}
 
 section#services {
   background-image: url("../img/gallery/contact.jpg");
@@ -10459,16 +10459,18 @@ section#portfolio {
 section#portfolio .section-heading {
   color: #fff;
 }
-/*
+
 section#about {
   background-image: url("../img/gallery/contact.jpg");
+
 }
+
 section#about .section-heading {
   color: #fff;
 }
 section#about p {
   color: #fff;
-}*/
+}
 
 section#contact {
   background-color: #1b1b22cc;
