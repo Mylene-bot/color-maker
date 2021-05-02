@@ -10545,9 +10545,8 @@ section#contact form#contactForm :-ms-input-placeholder {
   padding-bottom: 20px;
 }  
 .image-resize-atelier{
-  /*height: 470px;*/
-  width: 470px;
-  object-position: center center;
+  max-height: 50vh;
+  object-fit: fill;
 }   
 .btn-default {
   color: #333;
