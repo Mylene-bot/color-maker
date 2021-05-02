@@ -10437,14 +10437,14 @@ header.masthead .masthead-heading {
 .img-brand {
   height: 2.75rem;
 }
-
+/*
 section#atelier {
   background-image: url("../img/gallery/contact.jpg");
 }
 
 section#atelier .section-heading {
   color: #fff;
-}
+}*/
 
 section#services {
   background-image: url("../img/gallery/contact.jpg");
@@ -10459,9 +10459,9 @@ section#portfolio {
 section#portfolio .section-heading {
   color: #fff;
 }
-
+/*
 section#about {
-  background-image: url("../img/gallery/contact.jpg");
+  /*background-image: url("../img/gallery/contact.jpg");
 
 }
 
@@ -10470,7 +10470,7 @@ section#about .section-heading {
 }
 section#about p {
   color: #fff;
-}
+}*/
 
 section#contact {
   background-color: #1b1b22cc;
@@ -10532,14 +10532,21 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.image-resize{
-  height: 320px;
-  width: 320px;
+.image-resize-logo{
+  height: auto;
+  width: 300px;
   object-position: center center;
-}    
+}   
+
+.image-resize{
+  width: 100%;
+  height: 370px;
+  display: block;
+  padding-bottom: 20px;
+}  
 .image-resize-atelier{
-  height: 320px;
-  width: 320px;
+  /*height: 470px;*/
+  width: 470px;
   object-position: center center;
 }   
 .btn-default {
