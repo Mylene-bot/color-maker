@@ -9945,16 +9945,16 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: rgb(153, 120, 120);
-  /*background-color:#6db4e4cc;
-  background-image: url("img/banner/banner.png");*/
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5A8);
+  background-color:#2e8ff7cc;
+  background-image: url("img/banner/banner.png");
+  /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5A8);
   background-size: 400% 400%;
 animation: change 10s ease-in-out;
-animation-iteration-count: infinite;
+animation-iteration-count: infinite;*/
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  /*background-size: cover;*/
+  background-size: cover;
 }
 @keyframes change{
   0%{
@@ -10365,8 +10365,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .image-resize-logo{
   height: auto;
-  width: 300px;
-  object-position: center center;
+  width: 100%;
 }   
 
 .image-resize{
