@@ -123,19 +123,15 @@
         </section>
 
         <script>   
-
-           
+         
 
             function slideToRight() {
-
 
                 var list = ["img1","img2","img3","img4","img5","img6"];
                 var arrayLength = list.length;
                 for (var i = 0; i < arrayLength; i++) {
-                    console.log(list[i]);
                     
-                    var imgSrc = document.getElementById(list[i]).src;
-                    var stringNumber = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.lastIndexOf("."));     
+                    var imgSrc = document.getElementById(list[i]).src;                    
                     var img = document.getElementById(list[i]);
                     
                     if(!imgSrc.includes("img/portfolio/default.png")){                                                
@@ -143,16 +139,14 @@
                     }
                     else{
                     }
-                    console.log(document.getElementById(list[i]).title);
+                    var stringNumber = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.lastIndexOf("."));     
                     var nb = parseInt(stringNumber) + 6;
                     var path = "img/portfolio/" + nb.toString() + ".png";
 
-                    if(nb < 12){
+                    if(nb < 25){
                         img.setAttribute("src",path);  
-                    }               
-                    
+                    }           
                 }
-
             }
 
             function slideToLeft(){
@@ -161,30 +155,28 @@
 
                 var arrayLength = list.length;
                 for (var i = 0; i < arrayLength; i++) {
-                    console.log(list[i]);
                     
                     var imgSrc = document.getElementById(list[i]).src;
-
-                    if(imgSrc.includes("default.png")){
-                        console.log("Default ");
-                        imgSrc = document.getElementById(list[i]).title;
-                    }
-                    console.log("imgSrc : " + imgSrc);
-
-                    var stringNumber = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.lastIndexOf("."));     
                     var img = document.getElementById(list[i]);
 
-                    var nb = parseInt(stringNumber);
-                    if(parseInt(stringNumber) > 6){
-                        nb = parseInt(stringNumber) - 6;
+                    if(imgSrc.includes("default.png")){
+                        
+                        imgSrc = document.getElementById(list[i]).title;
+                        img.setAttribute("src",imgSrc)
                     }
-                    if(nb > 0){
-                        var path = "img/portfolio/" + nb.toString() + ".png";
-                        img.setAttribute("src",path);
-                    }
+                    else{
+                        var stringNumber = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.lastIndexOf("."));                            
 
+                        var nb = parseInt(stringNumber);
+                        if(parseInt(stringNumber) > 6){
+                            nb = parseInt(stringNumber) - 6;
+                        }
+                        if(nb > 0){
+                            var path = "img/portfolio/" + nb.toString() + ".png";                        
+                            img.setAttribute("src",path);
+                        }
+                    }                   
                 }
-
             }
 
     
@@ -219,8 +211,9 @@
                  
               
                     <div class="text-center" style="padding: 20px;">
-                        <button onclick="slideToLeft()" class="btn btn-default glyphicon glyphicon-menu-left"><</button>                        
-                        <button onclick="slideToRight()" class="btn btn-default btn-arrow-left">></button>
+                        
+                        <i onclick="slideToLeft()" class="fas fa-arrow-circle-left" style="margin-right: 20px; width: 30px; height: 30px;color: white;"></i>
+                        <i onclick="slideToRight()" class="fas fa-arrow-circle-right" style="margin-left: 20px; width: 30px; height: 30px;color:white"></i>
                     </div>               
                         
                 </div>
@@ -257,51 +250,46 @@
                     <h2 class="section-heading text-uppercase" style="padding-bottom: 40px;">Nous contacter</h2>
                 </div>
                                           
-                    <form id="contactForm" action="https://formspree.io/f/mleagnaz" method="POST">
-                        <div class="row align-items-stretch mb-5">  
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input class="form-control" id="name" name="nom" type="text" placeholder="Nom *" required="required" data-validation-required-message="Veuillez entrer votre prénom." />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="Email *" required="required" data-validation-required-message="Veuillez entrer votre adresse email." />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="form-group mb-md-0">
-                                    <input class="form-control" id="phone" name="numéro" type="tel" placeholder="Numéro de téléphone *" required="required" data-validation-required-message="Veuillez entrer votre numéro de téléphone." />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group form-group-textarea mb-md-0">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Message *" required="required" data-validation-required-message="Veuillez entrer un message"></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div> 
-                        
-                        </div>
-                        <div class="text-center">
-                            <div id="success"></div>
-                            <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
-
-                        </div>
-                    </form>
-                    <div class="text-center" style="padding: 40px;">
-                        <h4 style="color:white">COLOR MAKER</h4>
-                        <h4 style="color: white;">2 Impasse du Clos Neuf</h4>
-                        <h4 style="color: white;">44680 SAINTE-PAZANNE</h4>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                      <div class="card border-0" style="background-color: transparent;">
+                         <div class="card-body text-center" style="color: white;">
+                           <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+                           <p></p>
+                           <a style="color: white;" href="tel:+33 6 00 00 00 00">+33 6 00 00 00 00</a>
+                         </div>
+                       </div>
                     </div>
-                    <div class="text-center" style="padding: 20px;">
-                        <!--Google map-->
-                        <div id="map-container-google-2" class="z-depth-1-half map-container-2">
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                      <div class="card border-0" style="background-color: transparent;">
+                         <div class="card-body text-center" style="color: white;">
+                           <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
+                           <address>2 Impasse du Clos Neuf</address>
+                           <address>44680 SAINTE-PAZANNE</address>
+                         </div>
+                       </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
+                      <div class="card border-0" style="background-color: transparent;">
+                         <div class="card-body text-center" style="color: white;">
+                           <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
+                           <p></p>
+                           <a style="color: white;" href="mailto:contact@colormaker.com">contact@colormaker.com</a>
+                         </div>
+                       </div>
+                    </div>
+                  </div>
+                  <div class="text-center" style="padding: 20px;">
+                    <!--Google map-->
+                    <div id="map-container-google-2" class="z-depth-1-half map-container-2">
                         <iframe src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=2%20bis%20impasse%20du%20clos%20neuf+(COLOR%20MAKER)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0"
-                            style="border:0" allowfullscreen></iframe>
-                        </div>
-
+                        style="border:0;height: 40vh;" allowfullscreen></iframe>
                     </div>
+
+                </div>
             </div>
-            
+                    
+            </div>            
                 
         </section>
         <!-- Footer-->
