@@ -10533,13 +10533,13 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .image-resize{
-  height: 340px;
-  width: 340px;
+  height: 320px;
+  width: 320px;
   object-position: center center;
 }    
 .image-resize-atelier{
-  /*height: 470px;*/
-  width: 470px;
+  height: 320px;
+  width: 320px;
   object-position: center center;
 }   
 .btn-default {
