@@ -3729,7 +3729,7 @@ input[type=button].btn-block {
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: rgb(105, 34, 163);
   background-color: #4237e0;
 }
 
@@ -4098,16 +4098,17 @@ input[type=button].btn-block {
 .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
   color: rgba(0, 0, 0, 0.9);
 }
-
+/*
 .navbar-dark .navbar-brand {
   color: #fff;
-}
+}*/
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
   color: #fff;
 }
+/*
 .navbar-dark .navbar-nav .nav-link {
   color:#fff;
-}
+}*/
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -5962,7 +5963,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #fff !important; 
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -9669,7 +9670,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: white !important;
+  color: rgb(71, 69, 69) !important;
 }
 
 .text-black-50 {
@@ -9874,7 +9875,7 @@ img::-moz-selection {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: #ffffff;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -9882,10 +9883,10 @@ img::-moz-selection {
   font-size: 0.75rem;
   color: #fff;
   text-transform: uppercase;
-  background-color: #7acff7;
+  background-color: #27146b;
   border: 0;
 }
-#mainNav .navbar-brand {
+ #mainNav .navbar-brand {
   color: #fed136;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
@@ -9893,16 +9894,16 @@ img::-moz-selection {
   text-transform: uppercase;
 }
 #mainNav .navbar-brand img {
-  height: 1.5rem;
-}
+  height: 1.5em;
+} 
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
-  color: #fff;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #89d9f1;
+  color: #27146b;
 }
 
 @media (min-width: 992px) {
@@ -9916,22 +9917,28 @@ img::-moz-selection {
   #mainNav .navbar-brand {
     font-size: 1.5em;
     transition: font-size 0.3s ease-in-out;
-  }
+  } 
   #mainNav .navbar-brand img {
-    height: 2rem;
+    width: auto;
+    height: 1.5em;
     transition: height 0.3s ease-in-out;
   }
+ /*  #mainNav .navbar-brand img {
+    height: 2rem;
+    transition: height 0.3s ease-in-out;
+  } */
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #212529;
+    background-color: rgb(235, 231, 231);
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
-    height: 1.5rem;
+    width: auto;
+    height: 1.5em;
   }
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
@@ -9941,20 +9948,18 @@ img::-moz-selection {
   }
 }
 header.masthead {
-  padding-top: 10.5rem;
-  padding-bottom: 6rem;
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
   text-align: center;
-  color: rgb(153, 120, 120);
-  background-color:#2e8ff7cc;
-  background-image: url("img/banner/banner.png");
-  /*background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5A8);
-  background-size: 400% 400%;
-animation: change 10s ease-in-out;
-animation-iteration-count: infinite;*/
+  /*color: rgb(153, 120, 120);*/
+  background-color:#ffffff;
+  /*background-image: url("../img/banner/ice.jpg");*/
+  background-size: contain;
+  background-position: left;
+
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
-  background-size: cover;
+
 }
 @keyframes change{
   0%{
@@ -9984,8 +9989,8 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 1rem;
+    padding-bottom: 6.5rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -9999,6 +10004,9 @@ header.masthead .masthead-heading {
     line-height: 4.5rem;
     margin-bottom: 4rem;
   }
+}
+.banner{
+  margin-top: 4em;
 }
 #portfolio .portfolio-item {
   max-width: 25rem;
@@ -10271,34 +10279,36 @@ header.masthead .masthead-heading {
 
 section#atelier {
   /*background-image: url("../img/gallery/contact.jpg");*/
-  background-color: #2e8ff7cc;
+  background-color:#ffffffff;
 }
 
 section#atelier .section-heading {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 section#services {
-  background-image: url("../img/gallery/contact.jpg");
+  background-color:#ffffffff;
+  /*background-image: url("../img/gallery/contact.jpg");*/
 }
 section#services .section-heading {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 section#portfolio {
-  background-image: url("../img/gallery/portfolio.jpg");
+  /*background-image: url("../img/gallery/portfolio.jpg");*/
+  background-color:#ffffffff;
 }
 section#portfolio .section-heading {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 section#about {
   /*background-image: url("../img/gallery/contact.jpg");*/
-  background-color: #2e8ff7cc;
+  background-color: #ffffffff;
 }
 
 section#about .section-heading {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 /*
 section#about p {
@@ -10364,10 +10374,21 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.image-banner{
+  height: 40%;
+  margin: auto;
+  display: block;
+  padding-bottom: 20px;
+}
 
 .image-resize-logo{
-  height: auto;
   width: 100%;
+  /*
+  position: relative;*/
+  /*width: auto;*/
+  /*position: relative;
+  left: 50%;
+  top: 0;*/
 }   
 
 .image-resize{
