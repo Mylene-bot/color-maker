@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+          <!-- Vendor CSS Files -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     </head>
     <style>        
 
@@ -53,281 +56,229 @@
                     <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/lunatic_nono_/?hl=fr"><i class="bi bi-instagram btn-color"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="https://fr-fr.facebook.com/colormakerpeinture"><i class="fab fa-facebook-f btn-color"></i></a>
                     <a class="btn btn-dark btn-social mx-2" href="https://fr.linkedin.com/in/arnaud-antremont-256069b6"><i class="fab fa-linkedin-in btn-color"></i></a>
-                    <!-- <img src="img/logo.png" class="img-fluid" alt=""> -->
                 </div> 
-               <!--  <div class="col-md-4">
-                    <img src="img/banner/ice.jpg" class="image-resize-logo" alt="">
-                </div>
-                <div class="col-md-4">
-                    <img src="img/logo.png" class="image-resize-logo" alt="">
-                </div>
-                <div class="col-md-4">
-                    <img src="img/banner/elephant.jpg" class="image-resize-logo" alt="">
-                </div> -->
-                            
-                <!--a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Services</a-->
+        
             </div>
            
         </header>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container break-text text-center">
-                <h2 class="section-heading text-uppercase" style="padding: 40px;"></h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6 col-lg-6" style="padding: 40px;">
-                        <img src="img/portfolio/13.png" class="image-resize img-responsive" style="object-fit: contain" alt="...">
-                        <div>
-                            <h4 style="color: rgb(71, 69, 69);" class="my-3">Peinture</h4>
-                            <p style="color: rgb(71, 69, 69);" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6" style="padding: 40px;">
-                        <img src="img/banner/ice.jpg" class="image-resize img-responsive" style="object-fit: contain" alt="...">
-                        <div>
-                            <h4 style="color: rgb(71, 69, 69);" class="my-3">Vernissage</h4>
-                            <p style="color: rgb(71, 69, 69);" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="row align-items-center">
-                    <div class="col-md-6 col-lg-6" style="padding: 40px;">
-                        <img src="img/banner/elephant.jpg" class="image-resize img-responsive" style="object-fit: contain" alt="...">
-                        <div>
-                            <h4 style="color: rgb(71, 69, 69);" class="my-3">Laquage</h4>
-                            <p style="color: rgb(71, 69, 69);" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6" style="padding: 40px;">
-                        <img src="img/banner/ours.jpg" class="image-resize img-responsive" style="object-fit: contain" alt="...">
-                        <div>
-                            <h4 style="color: rgb(71, 69, 69);" class="my-3">Retouches</h4>
-                            <p style="color: rgb(71, 69, 69);" class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                        </div>
-                    </div>
-                  </div>
-            </div>
-        </section>
 
-
-        <script>   
-         
-
-            function slideToRight() {
-
-                var list = ["img1","img2","img3","img4","img5","img6"];
-                var arrayLength = list.length;
-                for (var i = 0; i < arrayLength; i++) {
-                    
-                    var imgSrc = document.getElementById(list[i]).src;                    
-                    var img = document.getElementById(list[i]);
-                    
-                    if(!imgSrc.includes("img/portfolio/default.png")){                                                
-                        img.setAttribute("title",imgSrc);
-                    }
-                    else{
-                    }
-                    var stringNumber = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.lastIndexOf("."));     
-                    var nb = parseInt(stringNumber) + 6;
-                    var path = "img/portfolio/" + nb.toString() + ".png";
-
-                    if(nb < 19){
-                        img.setAttribute("src",path);  
-                    }           
-                }
-            }
-
-            function slideToLeft(){
-           
-                var list = ["img1","img2","img3","img4","img5","img6"];
-
-                var arrayLength = list.length;
-                for (var i = 0; i < arrayLength; i++) {
-                    
-                    var imgSrc = document.getElementById(list[i]).src;
-                    var img = document.getElementById(list[i]);
-
-                    if(imgSrc.includes("default.png")){
-                        
-                        imgSrc = document.getElementById(list[i]).title;
-                        img.setAttribute("src",imgSrc)
-                    }
-                    else{
-                        var stringNumber = imgSrc.substring(imgSrc.lastIndexOf("/") + 1, imgSrc.lastIndexOf("."));                            
-
-                        var nb = parseInt(stringNumber);
-                        if(parseInt(stringNumber) > 6){
-                            nb = parseInt(stringNumber) - 6;
-                        }
-                        if(nb > 0){
-                            var path = "img/portfolio/" + nb.toString() + ".png";                        
-                            img.setAttribute("src",path);
-                        }
-                    }                   
-                }
-            }
-
-    
-        </script>
-        <!-- Portfolio Grid-->
-        <section class="page-section" id="portfolio" class="portfolio-hover">
-            <div class="wrapper">
-                <div class="container">
-                    <div class="text-center">
-                        <h2 class="section-heading text-uppercase"></h2>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-md-4 col-lg-4">
-                            <img class="img-responsive image-resize popup test" id="img1" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/1.png" src="img/portfolio/1.png" alt="image">
-                          </div>
-                          <div class="col-md-4 col-lg-4">
-                            <img class="img-responsive image-resize popup test" id="img2" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/2.png" src="img/portfolio/2.png" alt="image">
-                          </div>
-                          <div class="col-md-4 col-lg-4">
-                            <img class="img-responsive image-resize popup test" id="img3" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/3.png" src="img/portfolio/3.png" alt="image">
-                          </div>
-                          <div class="col-md-4 col-lg-4">
-                            <img class="img-responsive image-resize popup test" id="img4" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/4.png" src="img/portfolio/4.png" alt="image">
-                          </div>
-                          <div class="col-md-4 col-lg-4">
-                            <img class="img-responsive image-resize popup test" id="img5" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/5.png" src="img/portfolio/5.png" alt="image">
-                          </div>
-                          <div class="col-md-4 col-lg-4">
-                            <img class="img-responsive image-resize popup test" id="img6" onerror="javascript:this.src='img/portfolio/default.png'" title="img/portfolio/6.png" src="img/portfolio/6.png" alt="image">
-                          </div>  
-                                                  
-                    </div>                
-                 
-              
-                    <div class="text-center">
-                        <a class="btn" onclick="slideToLeft()"><i class="fas fa-arrow-circle-left" style="margin-right: 20px; width: 30px; height: 30px;color: rgba(20, 23, 24, 0.76);"></i></a>
-                        <a class="btn" onclick="slideToRight()"><i class="fas fa-arrow-circle-right" style="margin-left: 20px; width: 30px; height: 30px;color:rgba(20, 23, 24, 0.76);"></i></a>
-                    </div>               
-                        
-                </div>
-
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <img class="w-100" id="popup-img" src="" alt="image">
-      
-    </div>
-
-  </div>
-</div>
-            
-            </div>
-            
-
-        </section>
-        <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container text-center">
-                <h2 class="section-heading text-uppercase" style="padding: 40px;"></h2>
-                <div class="row align-items-center text-center">   
-                    <div class="col-md-6 col-lg-6">
-                        <img src="img/about/arnaud.jpg" class="img-responsive image-resize" style="object-fit: contain" alt="...">
-                    </div>   
-                    
-                    <div class="col-md-6 col-lg-6">
-                        <p>COLOR MAKER est un studio de peinture pour maquettes packaging. Avec une approche artisanale et sur-mesure, nous donnons leurs couleurs aux grandes marques du luxe, des cosmétiques, des spiritueux et de la grande consommation.
-                        </p>  
-                    </div>        
-                                       
-                </div>            
-            </div>
-        </section>
-       
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase" style="padding-bottom: 40px;"></h2>
-                </div>
-                                          
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                      <div class="card border-0" style="background-color: transparent;">
-                         <div class="card-body text-center" style="color: white;">
-                           <i class="fa fa-phone fa-5x mb-3" aria-hidden="true" style="font-size:4em;"></i>
-                           <p></p>
-                           <a style="color: white;" href="tel:+33 6 00 00 00 00">+33 6 00 00 00 00</a>
-                         </div>
-                       </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                      <div class="card border-0" style="background-color: transparent;">
-                         <div class="card-body text-center" style="color: white;">
-                           <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true" style="font-size:4em;"></i>
-                           <address>2 Impasse du Clos Neuf</address>
-                           <address>44680 SAINTE-PAZANNE</address>
-                         </div>
-                       </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-4 my-5">
-                      <div class="card border-0" style="background-color: transparent;">
-                         <div class="card-body text-center" style="color: white;">
-                           <i class="fa fa-globe fa-5x mb-3" aria-hidden="true" style="font-size:4em;"></i>
-                           <p></p>
-                           <a style="color: white;" href="mailto:contact@colormaker.com">contact@colormaker.com</a>
-                         </div>
-                       </div>
-                    </div>
-                  </div>
-                  <div class="text-center" style="padding: 0px;">
-                    <!--Google map-->
-                    <div id="map-container-google-2" class="map z-depth-1-half map-container-2">
-                        <iframe src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=2%20bis%20impasse%20du%20clos%20neuf+(COLOR%20MAKER)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0"
-                        style="border:0;height: 40vh;" allowfullscreen></iframe>
-                    </div>
-
-                </div>
-            </div>
-                    
-            </div>            
-                
-        </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">
-                        Copyright &copy; colormaker
-                        <!-- This script automatically adds the current year to your website footer-->
-                        <!-- (credit: https://updateyourfooter.com/)-->
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script>
-                        All rights reserved
-                    </div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/lunatic_nono_/?hl=fr"><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://fr-fr.facebook.com/colormakerpeinture"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="https://fr.linkedin.com/in/arnaud-antremont-256069b6"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-      
-      
         
-       
-        <!-- Bootstrap core JS-->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script>
-             $('.popup').click(function(){
-                var src = $(this).attr('src');
-                $('.modal').modal('show');
-                $('#popup-img').attr("src",src);
+<section id="services" class="page-section">
+  <div class="row text-center animated-text-left" style="max-width: 1100px;margin-left: auto;margin-right: auto;">
+    <h2>
+      Color Maker vous accompagne dans vos projets de finition, de l’élaboration de la teinte jusqu’à l’application finale.
+    </h2>
+  </div>
+  <div class="row text-center animated-text-right" style="max-width: 1100px;margin-left: auto;margin-right: auto;">
+    <h1 class="services-title">
+Coloristes              
+    </h1>
+    <p>
+      Nous pouvons contretyper ou créer les couleurs qui sublimeront vos projets. 
+    </p>
+  </div>
+  <div class="row text-center animated-text-left" style="max-width: 1100px;margin-left: auto;margin-right: auto;">
+    <h1 class="services-title">
+      Matiéristes
+    </h1>
+    <p>
+      Nous imaginons et développons dans notre laboratoire des effets de matière (marbre, bois, métaux…).
+    </p>
+  </div>
+    <div class="row text-center animated-text-right" style="max-width: 1100px;margin-left: auto;margin-right: auto;">
+      <h1 class="services-title">
+      Vernisseurs et laqueurs
+    </h1>
+    <p>
+      Nous appliquons en cabine de pulvérisation hors poussière des gammes de produits en adéquation avec vos besoins et cahier des charges (résistance extérieure, anti-feux, alimentaire…).
+    </p>
+  </div>
 
-            })
+
+</section>
+
+  <section id="portfolio" class="page-section section-bg">
+
+    <div class="row" style="max-width: 1100px;margin-left: auto;margin-right: auto;">
+      <div class="menu-portfolio" id="myBtnContainer">
+        <button class="btn-menu active" onclick="filterSelection('all')"> Tout voir</button>
+        <button class="btn-menu" onclick="filterSelection('art')"> art</button>
+        <button class="btn-menu" onclick="filterSelection('mobilier')"> mobilier</button>
+        <button class="btn-menu" onclick="filterSelection('autre')"> autre</button>
+      </div>
+    </div>
+  
+  
+  <!-- <!-- Portfolio Gallery Grid -->
+  <div class="row" style="max-width: 1100px;margin-left: auto;margin-right: auto;">
+    <div class="column art">
+      <div class="content">
+        <img src="img/portfolio/1.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+    
+    <div class="column art">
+      <div class="content">
+      <img src="img/portfolio/2.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+    <div class="column art">
+      <div class="content">
+      <img src="img/portfolio/3.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+    
+    <div class="column art">
+      <div class="content">
+        <img src="img/portfolio/4.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+    <div class="column art">
+      <div class="content">
+      <img src="img/portfolio/5.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+    <div class="column art">
+      <div class="content">
+      <img src="img/portfolio/6.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+  
+    <div class="column art">
+      <div class="content">
+        <img src="img/portfolio/7.png" alt="Art" style="width:100%" class="transparence">
+      </div>
+    </div>
+    <div class="column mobilier">
+      <div class="content">
+      <img src="img/portfolio/8.png" alt="Mobilier" style="width:100%" class="transparence">
+      </div>
+    </div>
+    <div class="column autre">
+      <div class="content">
+      <img src="img/portfolio/9.png" alt="Autre" style="width:100%" class="transparence">
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+<section class="page-section" id="contact"></sectionclass>
+  <div class="row" style="padding-top: 60px; padding-bottom: 60px;">
+    <div class="column">
+      <div class="card border-0" style="background-color: transparent;">
+        <div class="card-body text-center" style="color: white;">
+          <i class="fa fa-phone fa-5x mb-3" aria-hidden="true" style="font-size:4em;"></i>
+          <p></p>
+          <a style="color: white;" href="tel:+33 6 00 00 00 00">+33 6 00 00 00 00</a>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card border-0" style="background-color: transparent;">
+        <div class="card-body text-center" style="color: white;">
+          <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true" style="font-size:4em;"></i>
+          <address>2 Impasse du Clos Neuf</address>
+          <address>44680 SAINTE-PAZANNE</address>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card border-0" style="background-color: transparent;">
+        <div class="card-body text-center" style="color: white;">
+          <i class="fa fa-globe fa-5x mb-3" aria-hidden="true" style="font-size:4em;"></i>
+          <p></p>
+          <a style="color: white;" href="mailto:contact@colormaker.com">contact@colormaker.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <!--Google map-->
+      <div id="map-container-google-2" class="map z-depth-1-half map-container-2">
+          <iframe src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=2%20bis%20impasse%20du%20clos%20neuf+(COLOR%20MAKER)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0"
+          style="border:0;height: 60vh;" allowfullscreen></iframe>
+      </div>
+  </div>
+</section>
+
+
+<!-- Footer-->
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="">
+              Copyright &copy; colormaker
+              <!-- This script automatically adds the current year to your website footer-->
+              <!-- (credit: https://updateyourfooter.com/)-->
+              <script>
+                  document.write(new Date().getFullYear());
+              </script>
+              All rights reserved
+          </div>
+          <div class="row" style="padding-top: 30px;">
+              <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/lunatic_nono_/?hl=fr"><i class="fab fa-instagram"></i></a>
+              <a class="btn btn-dark btn-social mx-2" href="https://fr-fr.facebook.com/colormakerpeinture"><i class="fab fa-facebook-f"></i></a>
+              <a class="btn btn-dark btn-social mx-2" href="https://fr.linkedin.com/in/arnaud-antremont-256069b6"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn-menu");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
 
 
 
-        </script>
-    </body>
+</script>
+</section>
+
+</body>
 </html>
